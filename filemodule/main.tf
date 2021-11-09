@@ -1,7 +1,7 @@
 
 resource "local_file" "file" {
   filename = var.path
-  content = "Region: ${var.region}, count: ${var.instance_count}, global: ${var.global_param}"
+  content = "Region: ${var.region}, Env: ${var.env} count: ${var.instance_count}, global: ${var.global_param}"
 }
 
 variable "region" {
