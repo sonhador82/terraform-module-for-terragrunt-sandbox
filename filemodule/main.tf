@@ -1,6 +1,6 @@
 
 resource "local_file" "file" {
-  filename = "tempfile.txt"
+  filename = var.path
   content = "Region: ${var.region}, count: ${var.instance_count}, global: ${var.global_param}"
 }
 
@@ -13,5 +13,13 @@ variable "instance_count" {
 }
 
 variable "global_param" {
+  type = string
+}
+
+variable "env" {
+  type = string
+}
+
+variable "path" {
   type = string
 }
